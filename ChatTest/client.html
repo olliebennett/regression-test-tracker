@@ -13,6 +13,8 @@ function sendMessage(){
 }
 
 $(document).ready(function(){
+	
+	$("#text-input").focus();
 
   now.receiveMessage = function(name, message){
     $("#messages").append("<br>" + name + ": " + message);
@@ -23,7 +25,6 @@ $(document).ready(function(){
   });
   
   $("#text-input").keydown(function(e){
-	console.log(e.keyCode);
 	if(e.keyCode === 13){
 		sendMessage();
 	}
