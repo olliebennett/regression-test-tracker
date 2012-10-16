@@ -12,10 +12,12 @@ $(document).ready(function(){
     $("#messages").append("<br>" + name + ": " + message);
   }
 
-  $("#send-button").click(function(){
-    now.distributeMessage($("#text-input").val());
+  $("#send-button").click(sendMessage());
+  
+  function sendMessage(){
+	now.distributeMessage($("#text-input").val());
     $("#text-input").val("");
-  });
+  }
 
   now.name = prompt("What's your name?", "");
 
