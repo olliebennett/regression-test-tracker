@@ -12,7 +12,9 @@ $(document).ready(function(){
     $("#messages").append("<br>" + name + ": " + message);
   }
 
-  $("#send-button").click(sendMessage());
+  $("#send-button").click(function(){
+    sendMessage();
+  });
   
   function sendMessage(){
 	now.distributeMessage($("#text-input").val());
