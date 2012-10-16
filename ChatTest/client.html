@@ -17,6 +17,7 @@ $(document).ready(function(){
   });
   
   $("#send-button").keydown(function(e){
+	console.log(e.keyCode);
 	if(e.keyCode === 13){
 		sendMessage();
 	}
