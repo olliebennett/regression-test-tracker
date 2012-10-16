@@ -42,6 +42,8 @@ Note: This code __DOES NOT__ perform the testing for you.
 
 ### 3. Imagined Features
 
+- Add a git hook to auto-update the test server when you push a commit to GitHub.
+
 - Associate test areas together, so testing only happens on items which could have been affected by a change.
 
 ## Contact
