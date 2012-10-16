@@ -14,6 +14,14 @@ Note: This code __DOES NOT__ perform the testing for you.
 
 ### 2. Planned Features
 
+#### Short Term
+
+- Sync json across multiple clients and server using NowJS
+
+- Define basic page layout
+
+#### Long Term
+
 - Easily add new tests during a regression run.
 
 - Random or manual assignment of tasks.
