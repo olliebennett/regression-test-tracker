@@ -20,6 +20,14 @@ everyone.now.users = [];
 // Set up a 2D array to represent the values in the spreadsheet
 everyone.now.table = [[]];
 
+//function to add a column to the table
+everyone.now.addColumn = function(columnName){
+	//TODO server logic
+	
+	//tell clients to update their tables
+	
+}
+
 //function can be called from the clients to add a user.
 everyone.now.addUser = function(name){
 
