@@ -20,8 +20,32 @@ everyone.now.users = [];
 // Set up a 2D array to represent the values in the spreadsheet
 everyone.now.table = [[]];
 
-/* Example code to send updates using nowjs
-everyone.now.distributeMessage = function(message){
-  everyone.now.receiveMessage(this.now.name, message);
+//function can be called from the clients to add a user.
+everyone.now.addUser = function(name){
+	console.log("Adding user " + name);
+	
+	//add new user to the array
+	everyone.now.users.push(name);
+	
+	//call client side logic to update the list of online users
+	everyone.now.updateUsers();
 };
-//*/
+
+//function can be called from the clients to remove a user.
+//TODO - security issue - should only remove one self
+everyone.now.removeUser = function(name){
+	console.log("Removing user " + name);
+	
+	//remove user from the array
+	everyone.now.users.splice(everyone.now.users.indexOf(name),1);
+	
+	//call client side logic to update the list of online users
+	everyone.now.updateUsers();
+};
+
+
+
+
+
+
+
