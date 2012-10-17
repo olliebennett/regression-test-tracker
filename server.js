@@ -1,14 +1,13 @@
 // This file contains the core server logic required to serve the regression run website as well as providing real time updates across clients.
-var path = require('path'),
-	html = require('fs').readFileSync(__dirname+'/public/client.html');
+var fs = require('fs')
+
+var html = fs.readFileSync(__dirname+'/public/client.html');
 	
 var server = require('http').createServer(function(req, res){
-	if (req === "sadf"){
-		console.log("asdf");
-	}else{
-		console.log("unknown request - serving index page");
-		res.end(html);
-	}
+
+	console.log("unknown request - serving index page");
+	res.end(html);
+
 });
 server.listen(8080);
 
