@@ -16,7 +16,7 @@ Note: This code __DOES NOT__ perform the testing for you.
 
 #### Short Term
 
-- Sync json across multiple clients and server using NowJS
+COMPLETE - Sync json across multiple clients and server using NowJS
 
 - Define basic page layout
 
