@@ -14,7 +14,11 @@ server.listen(8080);
 var nowjs = require("now");
 var everyone = nowjs.initialize(server);
 
-everyone.now.test = 123;
+// Set up an array of users to be synced across the clients
+everyone.now.users = [];
+
+// Set up a 2D array to represent the values in the spreadsheet
+everyone.now.table = [[]];
 
 /* Example code to send updates using nowjs
 everyone.now.distributeMessage = function(message){
