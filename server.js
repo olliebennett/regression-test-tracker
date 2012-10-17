@@ -1,17 +1,22 @@
 // This file contains the core server logic required to serve the regression run website as well as providing real time updates across clients.
-var fs = require('fs');
+var fs = require('fs'),
+	express = require('express'),
+	nowjs = require("now");
 
-var html = fs.readFileSync(__dirname+'/public/client.html');
-	
-var server = require('http').createServer(function(req, res){
 
-	console.log("unknown request - serving index page");
-	res.end(html);
-
+var app = express();
+var server = app.listen(8080);
+var homePage = fs.readFileSync(__dirname+'/public/client.html');
+var homejs = fs.readFileSync(__dirname+'/public/client.js');
+app.get('/', function(req, res){
+  res.end(homePage);
 });
-server.listen(8080);
 
-var nowjs = require("now");
+app.get('/public/client.js', function(req, res){
+  res.end(homejs);
+});
+
+
 var everyone = nowjs.initialize(server);
 
 // Set up an array of users to be synced across the clients
