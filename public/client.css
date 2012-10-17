@@ -1,0 +1,56 @@
+* {
+	font-family: Georgia, serif;
+	color: #444;
+}
+
+body {
+	background-color: #EEE;
+	margin: 50px;
+}
+
+/* Headings */
+h1 {
+	font-size:180%;
+	margin-bottom: 10px;
+}
+h2 {
+	font-size:150%;
+	margin-bottom: 10px;
+}
+h3 {
+	font-weight: bold;
+	font-size:120%;
+	margin-bottom: 10px;
+}
+
+/* Text */
+p {
+	margin-bottom: 5px;
+}
+p.small {
+	font-size: 90%;
+}
+em {
+	font-style: italic;
+}
+strong {
+	font-weight: bold;
+}
+
+/* Links */
+a {
+	text-decoration: none;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.error {
+	color:red;
+}
+.success {
+	color:green;
+}
+
+div.clearfix {
+	clear: both;
+}

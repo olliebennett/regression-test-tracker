@@ -1,29 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<title>nowjs test</title>
+	
+	<title>NowJS Test</title>
+	
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 	<script src="/nowjs/now.js"></script>
-	<div id="header"></div>
+	
+	<script src="client.js"></script>
+	
+	<link rel="stylesheet" href="client.css" type="text/css" />
 </head>
 
 <body>
-  <div id="user-list"><!-- This list will display which users are currently online --></div>
-  <div id="task-container"><!-- all tasks are appended to here --></div>
+
+	<header>
+		<h1>NowJS Test</h1>
+	</header>
+	
+	<div id="userlist-container">
+		<h2>Online Users</h2>
+		<ul id="userlist">
+			<li>No Users</li>
+		</ul>
+	</div>
+	
+	<div id="tasklist-container">
+		<h2>Tasks</h2>
+		<ul id="tasklist">
+			<li>No Tasks</li>
+		</ul>
+	</div>
+	
+	<footer>
+		<p>Source code available on <a href="https://github.com/olliebennett/regression-test-tracker">GitHub</a>.</p>
+	</footer>
+
 </body>
-
-<script type="text/javascript">
-now.updateUsers = function(){
-	console.log(now.users);
-};
-
-now.notifyDuplicateUser = function(){
-	console.log("Unable to add duplicate user");
-};
-
-now.notifyUnknownUser = function(){
-	console.log("Cannot remove user - he does not exist");
-};
-</script>
 
 </html>
