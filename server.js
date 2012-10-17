@@ -22,25 +22,39 @@ everyone.now.table = [[]];
 
 //function can be called from the clients to add a user.
 everyone.now.addUser = function(name){
-	console.log("Adding user " + name);
-	
-	//add new user to the array
-	everyone.now.users.push(name);
-	
-	//call client side logic to update the list of online users
-	everyone.now.updateUsers();
+
+	//if user already exists then tell him to choose a new name
+	if(everyone.now.users.indexOf(name) !== -1){
+		console.log("Cannot add duplicate user " + name);
+		this.now.notifyDuplicateUser();
+	}else{
+		console.log("Adding user " + name);
+		
+		//add new user to the array
+		everyone.now.users.push(name);
+		
+		//call client side logic to update the list of online users
+		everyone.now.updateUsers();
+	}
 };
 
 //function can be called from the clients to remove a user.
 //TODO - security issue - should only remove one self
 everyone.now.removeUser = function(name){
-	console.log("Removing user " + name);
+	var index = everyone.now.users.indexOf(name);
 	
-	//remove user from the array
-	everyone.now.users.splice(everyone.now.users.indexOf(name),1);
-	
-	//call client side logic to update the list of online users
-	everyone.now.updateUsers();
+	if (index === -1){
+		console.log("Cannot remove user " + name + " - he does not exist");
+		this.now.notifyUnknownUser();
+	}else{
+		console.log("Removing user " + name);
+		
+		//remove user from the array
+		everyone.now.users.splice(everyone.now.users.indexOf(name),1);
+		
+		//call client side logic to update the list of online users
+		everyone.now.updateUsers();
+	}
 };
 
 
