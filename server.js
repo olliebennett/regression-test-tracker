@@ -26,10 +26,13 @@ everyone.now.users = [];
 everyone.now.table = [[]];
 
 //function to add a column to the table
-everyone.now.addColumn = function(columnName){
+everyone.now.addColumn = function(columnName,index){
 	//TODO server logic
+	var len = everyone.now.table[0].length;
+	everyone.now.table[0][len] = columnName;
 	
-	//tell clients to update their tables
+	//tell clients to update their table
+	everyone.now.updateTable();
 	
 }
 
