@@ -4,6 +4,12 @@ now.updateUsers = function(){
 
 };
 
+now.updateTable = function(){
+	console.log("TODO - updating table");
+	//TODO logic
+
+};
+
 now.notifyDuplicateUser = function(){
 	console.log("Unable to add duplicate user");
 };
