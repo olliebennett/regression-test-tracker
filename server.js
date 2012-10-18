@@ -46,7 +46,8 @@ everyone.now.addColumn = function(index, columnName){
 	
 	//add column to top row of table at specified index
 	if(len > 0){
-		everyone.now.table[0].splice(index, 0, columnName);	
+		everyone.now.table[0].push(columnName);
+		//TODO - send to specified index, not just the last column
 	}else{
 		everyone.now.table[0][0] = columnName;
 	}
