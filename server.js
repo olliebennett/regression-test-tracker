@@ -23,13 +23,21 @@ var everyone = nowjs.initialize(server);
 everyone.now.users = [];
 
 // Set up a 2D array to represent the values in the spreadsheet
-everyone.now.table = [[]];
+everyone.now.table = [];
+everyone.now.table[0] = [];
 
 //function to add a column to the table
-everyone.now.addColumn = function(columnName,index){
-	//TODO server logic
+everyone.now.addColumn = function(index, columnName){
+	
 	var len = everyone.now.table[0].length;
-	everyone.now.table[0][len] = columnName;
+	console.log("columns in table = " + len);
+	
+	//add column to top row of table at specified index
+	if(len > 0){
+		everyone.now.table[0].splice(index, 0, columnName);	
+	}else{
+		everyone.now.table[0][0] = columnName;
+	}
 	
 	//tell clients to update their table
 	everyone.now.updateTable();
@@ -72,9 +80,6 @@ everyone.now.removeUser = function(name){
 		everyone.now.updateUsers();
 	}
 };
-
-
-
 
 
 

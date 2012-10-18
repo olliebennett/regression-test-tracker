@@ -7,6 +7,7 @@ now.updateUsers = function(){
 now.updateTable = function(){
 	console.log("TODO - updating table");
 	//TODO logic
+	console.log(now.table);
 
 };
 
