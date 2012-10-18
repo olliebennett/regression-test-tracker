@@ -4,10 +4,13 @@ var fs = require('fs'),
 	nowjs = require("now");
 
 
+//set up server
 var app = express();
 var server = app.listen(8080);
 var homePage = fs.readFileSync(__dirname+'/public/client.html');
 var homejs = fs.readFileSync(__dirname+'/public/client.js');
+var jquery = fs.readFileSync(__dirname+'/public/jquery.min.js');
+var css = fs.readFileSync(__dirname+'/public/client.css');
 app.get('/', function(req, res){
   res.end(homePage);
 });
@@ -16,6 +19,15 @@ app.get('/public/client.js', function(req, res){
   res.end(homejs);
 });
 
+app.get('/public/jquery.js', function(req, res){
+  res.end(jquery);
+});
+
+app.get('/public/client.css', function(req, res){
+  res.end(css);
+});
+
+//end of server
 
 var everyone = nowjs.initialize(server);
 
