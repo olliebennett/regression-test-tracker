@@ -35,8 +35,10 @@ var everyone = nowjs.initialize(server);
 everyone.now.users = [];
 
 // Set up a 2D array to represent the values in the spreadsheet
-everyone.now.table = [];
-everyone.now.table[0] = [];
+var table = [];
+table[0] = [];
+table[0][0] = "";
+everyone.now.table = table;
 
 //function to add a column to the table
 everyone.now.addColumn = function(index, columnName){
