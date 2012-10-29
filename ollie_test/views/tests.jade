@@ -1,0 +1,60 @@
+extend layout
+
+block content
+  table.testset
+    thead
+      tr: th.dblclick(colspan="3") Importing Images
+    tbody
+      tr.options
+        td.dblclick.testtitle#testtitle1a
+          | Tag multiple images simultaneously
+        td
+          img.pass(src="/img/icons/32/accept.png",alt="Pass",title="Pass") 
+          img.fail(src="/img/icons/32/cancel.png",alt="Fail",title="Fail") 
+          img.unknown(src="/img/icons/32/help.png",alt="Unknown",title="Unknown") 
+        td
+          img.comment(src="/img/icons/32/comment.png",alt="Comment",title="Add Comment")
+      tr.detail
+        td.dblclick#detail1a(colspan="3") All (#detail1a) images should be correctly tagged.
+      tr.comment
+        td#com1a1(colspan="3") Someone else's comment (#com1a1 - not editable)...
+      tr.comment
+        td.dblclick#com1a2(colspan="3") Your (editable) example comment (#com1a2)...
+    
+    tbody
+      tr.options
+        td.dblclick.testtitle#testtitle1b
+          | Tag multiple images simultaneously
+        td
+          img.pass(src="/img/icons/32/accept.png",alt="Pass",title="Pass") 
+          img.fail(src="/img/icons/32/cancel.png",alt="Fail",title="Fail") 
+          img.unknown(src="/img/icons/32/help.png",alt="Unknown",title="Unknown") 
+        td
+          img.comment(src="/img/icons/32/comment.png",alt="Comment",title="Add Comment")
+      tr.detail
+        td.dblclick#detail1b(colspan="3") All (#detail1b) images should be correctly tagged.
+      tr.comment
+        td#com1b1(colspan="3") Someone else's comment (#com1b1 - not editable)...
+      tr.comment
+        td.dblclick#com1b2(colspan="3") Your (editable) example comment (#com1b2)...
+        
+    thead
+      tr: th.dblclick(colspan="3") Managing Images
+    tbody
+      tr.options
+        td.dblclick.testtitle#testtitle2a
+          | Tag multiple images simultaneously
+        td
+          img.pass(src="/img/icons/32/accept.png",alt="Pass",title="Pass") 
+          img.fail(src="/img/icons/32/cancel.png",alt="Fail",title="Fail") 
+          img.unknown(src="/img/icons/32/help.png",alt="Unknown",title="Unknown") 
+        td
+          img.comment(src="/img/icons/32/comment.png",alt="Comment",title="Add Comment")
+      tr.detail
+        td.dblclick#detail1a(colspan="3") All (#detail1a) images should be correctly tagged.
+      tr.comment
+        td#com2a1(colspan="3") Someone else's comment (#com2a1 - not editable)...
+      tr.comment
+        td.dblclick#com2a2(colspan="3") Your (editable) example comment (#com2a2)...
+
+  p Doubleclick to edit any text in the table above.

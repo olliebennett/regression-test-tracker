@@ -1,0 +1,38 @@
+!!!5
+html
+  head
+    title Regression Test Tracker
+    link(rel='stylesheet', href='/css/normalize.css')
+    link(rel='stylesheet', href='/css/style.css')
+    script(src="/js/jquery-1.8.2.js")
+    script(src="/js/jquery.jeditable.js")
+  body
+    header
+      h1 #{title}
+      nav
+        a(href="/") Home
+        | 
+        a(href="/tests") Tests
+        | 
+        a(href="/settings") Settings
+        | 
+        a(href="/about") About
+    #container
+      block content
+    footer
+      p
+        | Running on 
+        a(href="http://nodejs.org/") Node.js
+        |  with 
+        a(href="http://expressjs.com/") Express
+        |  and 
+        a(href="http://jade-lang.com/") Jade
+        | .
+    
+    script(type="text/javascript")
+      $(document).ready(function() {
+        $('.dblclick').editable('http://localhost/save', {
+          tooltip   : 'Doubleclick to edit...',
+          event     : 'dblclick',
+        });
+      });

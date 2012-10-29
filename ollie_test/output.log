@@ -1,0 +1,21 @@
+29 Oct 21:02:50 - [nodemon] v0.6.23
+29 Oct 21:02:50 - [32m[nodemon] watching: C:\Dropbox\GitHub\regression-test-tracker\ollie_test[0m
+29 Oct 21:02:50 - [32m[nodemon] starting `node app.js`[0m
+Server started.
+
+events.js:68
+        throw arguments[1]; // Unhandled 'error' event
+                       ^
+Error: listen EADDRINUSE
+    at errnoException (net.js:769:11)
+    at Server._listen2 (net.js:909:14)
+    at listen (net.js:936:10)
+    at Server.listen (net.js:985:5)
+    at Function.app.listen (C:\Dropbox\GitHub\regression-test-tracker\node_modules\express\lib\application.js:534:24)
+    at Object.<anonymous> (C:\Dropbox\GitHub\regression-test-tracker\ollie_test\app.js:85:5)
+    at Module._compile (module.js:449:26)
+    at Object.Module._extensions..js (module.js:467:10)
+    at Module.load (module.js:356:32)
+    at Function.Module._load (module.js:312:12)
+29 Oct 21:02:50 - [1;31m[nodemon] app crashed - waiting for file changes before starting...[0m
+^C

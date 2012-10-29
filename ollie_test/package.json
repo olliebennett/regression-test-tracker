@@ -1,0 +1,10 @@
+{
+  "name": "regression-test-tracker",
+  "description": "Regression Test Tracker",
+  "version": "0.0.1",
+  "private": "true",
+  "dependencies": {
+    "express": "*",
+    "jade": "*"
+  }
+}

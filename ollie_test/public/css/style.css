@@ -1,0 +1,43 @@
+td,th,tr {
+  border: 1px solid black;
+}
+
+header h1 {
+  border: 3px solid black;
+  margin: 10px 10px 0px 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+header nav {
+  border: 3px solid black;
+  margin: 10px 10px 0px 10px;
+  padding: 10px;
+}
+header nav a {
+  text-transform: uppercase;
+}
+
+div#container {
+  border: 3px solid pink;
+  margin: 10px 10px 0px 10px;
+}
+
+table.testset {
+  width: 100%;
+}
+table.testset thead tr th {
+  text-align: left;
+  background-color: cyan;
+}
+table.testset tbody {
+  margin-left: 10px;
+  border: 3px solid purple;
+}
+
+footer {
+  border: 3px solid black;
+  margin: 10px 10px 0px 10px;
+  padding: 10px;
+  text-align: center;
+}
